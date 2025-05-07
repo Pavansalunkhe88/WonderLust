@@ -13,13 +13,8 @@ const Listingschema = new Schema({
   },
   description: String,
   image: {
-    type: String,
-    default:
-      "https://www.istockphoto.com/photo/girls-bedroom-gm916076968-252087031?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Froom&utm_medium=affiliate&utm_source=unsplash&utm_term=room%3A%3A%3A",
-    set: (v) =>
-      v === ""
-        ? "https://www.istockphoto.com/photo/girls-bedroom-gm916076968-252087031?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Froom&utm_medium=affiliate&utm_source=unsplash&utm_term=room%3A%3A%3A"
-        : v,
+    url: String,
+    filename: String,
   },
   price: Number,
   location: String,
